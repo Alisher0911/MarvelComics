@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="HomeViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marvel Comics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivu-8b-3BN">
+                                <rect key="frame" x="16" y="8" width="166" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WbY-Dn-E7g">
+                                <rect key="frame" x="0.0" y="47.5" width="375" height="300"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="P7b-jI-yfm"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DEQ-kD-Gg5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marvel Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4u-2X-gBB">
+                                <rect key="frame" x="16" y="387.5" width="204.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xQG-wl-rKX">
+                                <rect key="frame" x="0.0" y="427" width="375" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="N0M-JP-sCT"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QXi-VD-Unv">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJO-7D-xKl">
+                                <rect key="frame" x="327" y="8" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="ALL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="allComicsButtonPressed:" destination="nTq-cw-PKg" eventType="touchUpInside" id="pX9-yn-kC0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lot-L5-ISP">
+                                <rect key="frame" x="327" y="387.5" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="ALL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="allCharactersButtonPressed:" destination="nTq-cw-PKg" eventType="touchUpInside" id="wbs-Ll-Ylj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25977574481865284" green="0.0869105025033272" blue="0.068036520580023366" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="Lot-L5-ISP" secondAttribute="trailing" constant="16" id="0g7-fe-M43"/>
+                            <constraint firstItem="Ivu-8b-3BN" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" constant="8" id="108-yY-ciV"/>
+                            <constraint firstItem="WbY-Dn-E7g" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="5Ux-Ir-f72"/>
+                            <constraint firstItem="xQG-wl-rKX" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="Clr-jv-oYq"/>
+                            <constraint firstItem="WbY-Dn-E7g" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="FWN-0O-QyR"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="lJO-7D-xKl" secondAttribute="trailing" constant="16" id="HjM-A7-u7v"/>
+                            <constraint firstItem="Ivu-8b-3BN" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="16" id="L3n-Cq-Y9B"/>
+                            <constraint firstItem="R4u-2X-gBB" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="16" id="O9r-Yj-JgR"/>
+                            <constraint firstItem="Lot-L5-ISP" firstAttribute="top" secondItem="WbY-Dn-E7g" secondAttribute="bottom" constant="40" id="Ys3-yM-dbN"/>
+                            <constraint firstItem="xQG-wl-rKX" firstAttribute="top" secondItem="R4u-2X-gBB" secondAttribute="bottom" constant="8" id="bv6-Aj-d5p"/>
+                            <constraint firstItem="WbY-Dn-E7g" firstAttribute="top" secondItem="Ivu-8b-3BN" secondAttribute="bottom" constant="8" id="dYt-zL-zpQ"/>
+                            <constraint firstItem="lJO-7D-xKl" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" constant="8" id="gYn-kc-Hh7"/>
+                            <constraint firstItem="xQG-wl-rKX" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="kK4-4U-TZH"/>
+                            <constraint firstItem="R4u-2X-gBB" firstAttribute="top" secondItem="WbY-Dn-E7g" secondAttribute="bottom" constant="40" id="td7-bl-zFe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                    </view>
+                    <connections>
+                        <outlet property="charactersCV" destination="xQG-wl-rKX" id="J2R-Nj-aKG"/>
+                        <outlet property="comicsCV" destination="WbY-Dn-E7g" id="suq-RQ-meP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="HomeModuleInitializer" customModule="MarvelComics" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-86.806596701649184"/>
+        </scene>
+    </scenes>
+</document>

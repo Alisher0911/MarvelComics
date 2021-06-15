@@ -1,0 +1,21 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}ModuleInitializer: NSObject {
+
+    func viewController() -> UIViewController {
+        let storyboard = UIStoryboard(name: "{{ module_info.name }}", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(identifier: "{{ module_info.name }}ViewController") as! {{ module_info.name }}ViewController
+        let configurator = {{ module_info.name }}ModuleConfigurator()
+        configurator.configureModuleForViewInput(viewInput: vc)
+        
+        return vc
+    }
+}

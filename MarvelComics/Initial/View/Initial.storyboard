@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="InitialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="InitialViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="8V6-6c-UZH">
+                                <rect key="frame" x="40" y="492" width="295" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryf-Ie-3f7">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="46"/>
+                                        <color key="backgroundColor" red="0.13478327305893967" green="0.13738218439265035" blue="0.14517891839378239" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="nTq-cw-PKg" eventType="touchUpInside" id="xVv-CT-s4y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRb-KB-QOl">
+                                        <rect key="frame" x="0.0" y="59" width="295" height="46"/>
+                                        <color key="backgroundColor" red="0.1547950095" green="0.15777979019999999" blue="0.16673413209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="nTq-cw-PKg" eventType="touchUpInside" id="rHl-6y-w8c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel2" translatesAutoresizingMaskIntoConstraints="NO" id="evh-kL-GlD">
+                                <rect key="frame" x="37.5" y="130" width="300" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="mmC-Uz-No6"/>
+                                    <constraint firstAttribute="width" constant="300" id="sHJ-Cd-0Sy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-i8-OFi">
+                                <rect key="frame" x="88.5" y="308" width="198" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="fBB-jZ-0pa"/>
+                                    <constraint firstAttribute="width" constant="198" id="vvS-jX-dfb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8V6-6c-UZH" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="40" id="1y7-aV-oho"/>
+                            <constraint firstItem="vgt-i8-OFi" firstAttribute="top" secondItem="evh-kL-GlD" secondAttribute="bottom" constant="8" id="Apc-nF-6Fn"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="bottom" secondItem="8V6-6c-UZH" secondAttribute="bottom" constant="70" id="DQw-ff-tME"/>
+                            <constraint firstItem="evh-kL-GlD" firstAttribute="centerX" secondItem="Ssi-FC-3Ro" secondAttribute="centerX" id="SBU-bU-DH6"/>
+                            <constraint firstItem="vgt-i8-OFi" firstAttribute="centerX" secondItem="Ssi-FC-3Ro" secondAttribute="centerX" id="We6-7Y-Mv4"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="8V6-6c-UZH" secondAttribute="trailing" constant="40" id="aWM-uA-7AI"/>
+                            <constraint firstItem="evh-kL-GlD" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" constant="130" id="cRd-fi-JGn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Ryf-Ie-3f7" id="f74-jg-ukS"/>
+                        <outlet property="registerButton" destination="wRb-KB-QOl" id="t32-EW-uZZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="InitialModuleInitializer" customModule="MarvelComics" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-86.806596701649184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="marvel" width="400" height="147"/>
+        <image name="marvel2" width="1309" height="876"/>
+    </resources>
+</document>

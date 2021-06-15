@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character Detail View Controller-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="CharacterDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="CharacterDetailViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mOj-ZP-Qqh">
+                                <rect key="frame" x="67.5" y="16" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="8NF-Yd-xp3"/>
+                                    <constraint firstAttribute="width" constant="240" id="cTL-Ni-e54"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCO-aT-eno">
+                                <rect key="frame" x="40" y="264" width="295" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j77-cf-sTN">
+                                <rect key="frame" x="0.0" y="335.5" width="375" height="331.5"/>
+                                <color key="backgroundColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="j77-cf-sTN" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="10h-Lf-rhy"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="OCO-aT-eno" secondAttribute="trailing" constant="40" id="1Dx-bc-rfa"/>
+                            <constraint firstItem="j77-cf-sTN" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="D72-Cn-F7K"/>
+                            <constraint firstItem="j77-cf-sTN" firstAttribute="top" secondItem="OCO-aT-eno" secondAttribute="bottom" constant="40" id="DGQ-nG-YEj"/>
+                            <constraint firstItem="mOj-ZP-Qqh" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" constant="16" id="F2g-HB-GGG"/>
+                            <constraint firstItem="j77-cf-sTN" firstAttribute="bottom" secondItem="Ssi-FC-3Ro" secondAttribute="bottom" id="es6-nG-OC1"/>
+                            <constraint firstItem="OCO-aT-eno" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="40" id="jVl-Sp-V82"/>
+                            <constraint firstItem="OCO-aT-eno" firstAttribute="top" secondItem="mOj-ZP-Qqh" secondAttribute="bottom" constant="8" id="ogK-1u-gfT"/>
+                            <constraint firstItem="mOj-ZP-Qqh" firstAttribute="centerX" secondItem="Ssi-FC-3Ro" secondAttribute="centerX" id="r7L-Ss-iLx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="j77-cf-sTN" id="BgN-9a-SNH"/>
+                        <outlet property="nameLabel" destination="OCO-aT-eno" id="koB-VO-dBa"/>
+                        <outlet property="thumbnailImageView" destination="mOj-ZP-Qqh" id="vmo-qr-eMC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="CharacterDetailModuleInitializer" customModule="MarvelComics" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-86.806596701649184"/>
+        </scene>
+    </scenes>
+</document>

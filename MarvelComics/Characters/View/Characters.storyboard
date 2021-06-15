@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Characters View Controller-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="CharactersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="CharactersViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yd1-6y-QTf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="yd1-6y-QTf" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="Gri-9d-pvh"/>
+                            <constraint firstItem="yd1-6y-QTf" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="V9r-Xm-k8Q"/>
+                            <constraint firstItem="yd1-6y-QTf" firstAttribute="bottom" secondItem="Ssi-FC-3Ro" secondAttribute="bottom" id="cPP-2f-Z36"/>
+                            <constraint firstItem="yd1-6y-QTf" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" id="ecP-bh-q3m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="yd1-6y-QTf" id="LsW-3Y-gi8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="CharactersModuleInitializer" customModule="MarvelComics" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-86.806596701649184"/>
+        </scene>
+    </scenes>
+</document>

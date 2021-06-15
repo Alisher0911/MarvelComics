@@ -1,0 +1,20 @@
+### Headers settings
+company: iOS Developer
+
+### Xcode project settings
+project_name: MarvelComics
+xcodeproj_path: MarvelComics.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: MarvelComics
+
+# The file path for new modules
+project_file_path: MarvelComics
+
+# The Xcode group path to new modules
+project_group_path: MarvelComics
+
+### Templates
+templates:
+- {name: swifty_viper}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="ProfileViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr2-K0-EKd">
+                                <rect key="frame" x="16" y="100" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6q-px-Iym">
+                                <rect key="frame" x="16" y="154.5" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6Q-aM-iZi">
+                                <rect key="frame" x="60" y="333.5" width="255" height="60"/>
+                                <color key="backgroundColor" red="0.1547950095" green="0.15777979019999999" blue="0.16673413209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KSX-w6-cUB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Favorite Comics">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToFavoriteButtonPressed:" destination="nTq-cw-PKg" eventType="touchUpInside" id="mWD-Wq-DO1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJD-1m-QNJ">
+                                <rect key="frame" x="112.5" y="577" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.1547950095" green="0.15777979019999999" blue="0.16673413209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MEY-eq-N4j"/>
+                                    <constraint firstAttribute="width" constant="150" id="gCE-pZ-V9G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButtonPressed:" destination="nTq-cw-PKg" eventType="touchUpInside" id="Nwf-qr-R2f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28416450780000002" green="0.096275672130000003" blue="0.095967067670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="w6Q-aM-iZi" firstAttribute="centerX" secondItem="Ssi-FC-3Ro" secondAttribute="centerX" id="22u-tg-PQm"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="bottom" secondItem="yJD-1m-QNJ" secondAttribute="bottom" constant="40" id="5W3-Yt-qAH"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="D6q-px-Iym" secondAttribute="trailing" constant="16" id="77N-1e-ddk"/>
+                            <constraint firstItem="Vr2-K0-EKd" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" constant="100" id="LBN-LD-h3r"/>
+                            <constraint firstItem="Vr2-K0-EKd" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="16" id="OB5-JM-Ahl"/>
+                            <constraint firstItem="D6q-px-Iym" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="16" id="bf6-kD-45R"/>
+                            <constraint firstItem="w6Q-aM-iZi" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="60" id="erJ-PZ-phD"/>
+                            <constraint firstItem="yJD-1m-QNJ" firstAttribute="centerX" secondItem="Ssi-FC-3Ro" secondAttribute="centerX" id="pg2-gi-hhp"/>
+                            <constraint firstItem="w6Q-aM-iZi" firstAttribute="top" secondItem="D6q-px-Iym" secondAttribute="bottom" constant="150" id="tnV-gf-Q7n"/>
+                            <constraint firstItem="D6q-px-Iym" firstAttribute="top" secondItem="Vr2-K0-EKd" secondAttribute="bottom" constant="16" id="u4b-ht-7dg"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="Vr2-K0-EKd" secondAttribute="trailing" constant="16" id="vaG-Zi-peN"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="w6Q-aM-iZi" secondAttribute="trailing" constant="60" id="vnr-OM-ud0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="D6q-px-Iym" id="Plh-9e-Nbh"/>
+                        <outlet property="goToFavoriteButton" destination="w6Q-aM-iZi" id="lq2-pL-mZp"/>
+                        <outlet property="signOutButton" destination="yJD-1m-QNJ" id="qR0-ru-1yd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="ProfileModuleInitializer" customModule="MarvelComics" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-86"/>
+        </scene>
+    </scenes>
+</document>
