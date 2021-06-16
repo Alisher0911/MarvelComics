@@ -34,19 +34,30 @@ class CoreDataManager {
         }
     }
     
+    func backgroundSave(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
+    }
     
     func addComics(_ comics: ComicsDetailEntity.ComicsData.Comics, email: String) {
         let context = persistentContainer.viewContext
-        context.perform {
-            let newComics = FavComicsEntity(context: context)
+        let backgroundContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        backgroundContext.parent = context
+        backgroundContext.perform {
+            let newComics = FavComicsEntity(context: backgroundContext)
             newComics.id = Int64(comics.id)
             newComics.name = comics.title
             newComics.format = comics.format
             newComics.desc = comics.description
             newComics.userEmail = email
             newComics.thumbnail = "\(comics.thumbnail?.path ?? "")"
+            
+            self.backgroundSave(context: backgroundContext)
+            self.save()
         }
-        save()
     }
     
     func findComics(with id: Int, email: String) -> FavComicsEntity? {
@@ -81,6 +92,7 @@ class CoreDataManager {
             save()
         }
     }
+    
     
     func allComics(email: String) -> [ComicsEntity.ComicsData.Comics] {
         let context = persistentContainer.viewContext
